@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  postgres:
+    build: .
+    environment:
+      POSTGRES_USER: modeste
+      POSTGRES_PASSWORD: Hunter15@gdd.tg
+      POSTGRES_DB: spotify
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  adminer:
+    image: adminer
+    ports:
+      - "8080:8080"
+
+volumes:
+  pgdata:
