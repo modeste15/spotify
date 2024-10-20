@@ -45,7 +45,7 @@ def get_playlists():
             "Authorization": f"Bearer {get_token()}"
         }
 
-        response = requests.get(API_URL, headers=headers)
+        response = requests.get(API_URL, headers=headers) 
         
         if response.status_code == 200:
             playlists = response.json()  
